@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books Project</title>
+    <script src="books.js"></script>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="ajout">Ajouter un livre</button>
+    <button id="edit">editer un livre</button>
+    <button id="supprimer">suprimer un livre</button>
+    <table>
+      <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>author</th>
+        <th>Price</th>
+        <th>Edit</th>
+      </tr>
+    </table>
+    <form method="post">
+      <label>le id de livre à ajouter : </label>
+      <input type="text" value="Donner un Id pour le livre souhaitez" id="id" />
+      <label>le nom de livre à ajouter : </label>
+      <input
+        type="text"
+        value="Donner un nom pour le livre souhaitez"
+        id="nomlivre"
+      />
+      <label>le nom de l'auteur à ajouter : </label>
+      <input
+        type="text"
+        value="Donner un nom auteur pour le livre souhaitez"
+        id="nomauteur"
+      />
+      <label>le prix de livre à ajouter : </label>
+      <input
+        type="text"
+        value="Donner un prix pour le livre souhaitez"
+        id="prix"
+      />
+    </form>
+    <form>
+      <label>le id de livre à supprimer : </label>
+      <input
+        type="text"
+        value="Donner un Id pour le livre souhaitez"
+        id="idsup"
+      />
+    </form>
+  </body>
+</html>

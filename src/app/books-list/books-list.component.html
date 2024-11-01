@@ -1,0 +1,38 @@
+<h1>{{ title }}</h1>
+
+<button 
+  class="btn btn-success mb-3" 
+  (click)="changeAction('add')"  
+  >Ajouter un livre</button>
+  @if (action === "add") {
+    <app-book-add [lastId]="books[books.length - 1].id" (bookCreated)="addBook($event)"></app-book-add>
+  }
+  @if (action === "modify") {
+   <app-modify  [Id]="i"  (bookMade)="modifyBook($event)"></app-modify> 
+  
+  }
+<table class="table table-sm table-dark">
+  <thead>
+    <tr class="bg-dark">
+      <th>#</th>
+    <th>Titre</th>
+    <th>Auteur</th>
+    <th>Prix</th>
+    <th>Editer</th>
+    <TH>Supprimer</TH>
+    </tr>
+  </thead>
+  <tbody>
+    @for (book of books; track $index) {
+      
+    <tr>
+        <th scope="row">{{book.id}}</th>
+        <td>{{book.title}}</td>
+        <td>{{book.author}}</td>
+        <td>{{book.price}}</td>
+        <td><button class="btn btn-primary" (click)="changeAction('modify')" >Editer</button></td>
+        <td><button class="btn btn-danger">Supprimer</button></td>
+      </tr>
+    }
+  </tbody>
+</table>
